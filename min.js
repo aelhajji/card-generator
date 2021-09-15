@@ -73,12 +73,35 @@ function changeBg(){
 
 function SaveImg(){
 
-    alert('هده الخدمة في طور الانجاز وستكون متاحة قريبا')
+    // alert('هده الخدمة في طور الانجاز وستكون متاحة قريبا')
+    const input = document.getElementById('card-content');    
+html2canvas(input)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        console.log(canvas);
+        document.body.appendChild(canvas)
+        downloadURI(imgData, "MaSimulation.png");
+  });
 }
-function SavePdf(){
-    alert(' هده الخدمة في طور الانجاز وستكون متاحة قريبا ')
-    // const text = document.getElementsByClassName('card-content')[0];
-    // html2pdf()
-    // .from(text)
-    // .save();
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+}
+function SavePdf(){    
+    const text = document.getElementsByClassName('card-content')[0];
+    html2pdf(text, {
+        hmargin:       -0.60, 
+        vmargin:       20, 
+        filename:     this.nameofpersone.value+' card.pdf',
+        image:        { type: 'jpeg', quality: 1 },
+        html2canvas:  { dpi: 192, letterRendering: true },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait'}
+       
+   });
+    html2pdf()
+    .from(text)
 }
