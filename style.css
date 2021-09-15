@@ -3,6 +3,7 @@
     src: url(fonts/sondosblack.ttf);
   }
 body{
+    align-items: center;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
     url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
@@ -112,5 +113,15 @@ footer h5 a{
     }
     .cotrol-element::-webkit-scrollbar {
         display: none;
+    }
+    body{
+        align-items:flex-start;
+        margin-top: 10px;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+        url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
+        background-size: cover;
+        /* background-color: brown; */
+        /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
     }
   }
