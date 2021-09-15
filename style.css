@@ -116,7 +116,7 @@ footer h5 a{
     }
     body{
         align-items:flex-start;
-        margin-top: 10px;
+        margin-top: 30px;
         height: 100vh;
         background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
         url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
