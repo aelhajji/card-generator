@@ -2,12 +2,24 @@
     font-family: sondos;
     src: url(fonts/sondosblack.ttf);
   }
+@font-face {
+    font-family: hand;
+    src: url('fonts/creattion-demo.regular.otf');
+}
+@font-face {
+    font-family: Shopping;
+    src: url(fonts/Shopping.ttf);
+}
 body{
-    align-items: center;
-    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-    url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
+    url('imges/sitebg.webp') ;
     background-size: cover;
+    height: 100vh;
+
+}
+.cont{
+    align-items: center;
+    height: 95%;
     /* background-color: brown; */
     /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
 }
@@ -85,6 +97,14 @@ footer h5 a{
     text-decoration: none;
     color: white;
 }
+footer{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    margin-left: -32px;
+    font-family: hand;
+    writing-mode: vertical-rl;
+}
 
 /* media suery */
 @media only screen and (max-width: 1000px) {
@@ -100,12 +120,12 @@ footer h5 a{
     footer h5 a{
         text-decoration: none;
         color: white;
-        font-size: 14px;
+        font-size: 24px;
     }
     .cotrol-element{
         overflow: scroll;
         overflow-x: hidden;
-        max-height: 282px;
+        max-height: 315px;
         background-color: #9aa163;
         width: 89%;
         margin: 3px;
@@ -114,13 +134,11 @@ footer h5 a{
     .cotrol-element::-webkit-scrollbar {
         display: none;
     }
-    body{
+    .cont{
         align-items:flex-start;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         height: 100vh;
-        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-        url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
-        background-size: cover;
+        
         /* background-color: brown; */
         /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
     }
