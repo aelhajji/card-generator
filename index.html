@@ -15,7 +15,7 @@
     <div  class="">
         <div class="container">
             <div class="row mt-4 d-flex justify-content-center align-items-center">
-                <div class="card-content col-sm">
+                <div id="card-content" class="card-content col-sm">
                     <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
                     <h3 id="org-name-fr-html" class="gov-title-fr">ORGANISATION NAME</h3>
                     <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
@@ -65,7 +65,8 @@
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center flex-wrap">
-                <button class="btn btn-info mt-2 m-auto">تحميل البطاقة</button>
+                <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> تحميل البطاقة كصورة</button>
+                <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1">pdf تحميل البطاقة</button>
             </div> 
         </div>
     </div>
@@ -74,5 +75,6 @@
         <h5 class="text-center"><a href="https://twitter.com/SomeAbdeu" target="blank">By:@someabdeu</a></h5>
     </footer>
     <script src="min.js"></script>
+    <script src="cdn_pdf_githack.js"></script>
 </body>
 </html>

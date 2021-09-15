@@ -9,7 +9,7 @@ var cin =document.getElementById('cin');
 var annins = document.getElementById('aan-ins');
 var myadresse = document.getElementById('adresse');
 var bg = document.getElementById('select-bg')
-
+var dataa = document.getElementsByClassName('card-content')
 
 //calling content
 //by @aelhajji
@@ -66,4 +66,19 @@ function changeBg(){
     }else
     document.getElementsByClassName("card-content")[0].style.backgroundImage = "url('"+bg.value+"')";
     
+}
+
+//save img 
+// by @aelhajji
+
+function SaveImg(){
+
+    alert('هده الخدمة في طور الانجاز وستكون متاحة قريبا')
+}
+function SavePdf(){
+    alert(' هده الخدمة في طور الانجاز وستكون متاحة قريبا ')
+    const text = document.getElementsByClassName('card-content')[0];
+    html2pdf()
+    .from(text)
+    .save();
 }
