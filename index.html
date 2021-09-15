@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="imges/card.png" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CARD GENERATOR</title>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <div  class="">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="card-content col-sm">
+                    <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
+                    <h3 id="org-name-fr-html" class="gov-title-fr">ORGANISATION NAME</h3>
+                    <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
+                    <div class="person-info">
+                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
+                            <h3 class="info-element">الاسم الكامل&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+                            <h3 id="per-name-html" class="content-info-element">الاسم الكامل </h3>
+                        </div>
+                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
+                            <h3 class="info-element"> الصفة&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+                            <h3 id="per-iden-html" class="content-info-element">الصفة</h3>
+                        </div>
+                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
+                            <h3 class="info-element">ر.ب.و&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+                            <h3 id="cin-html" class="content-info-element">HA000000</h3>
+                        </div>
+                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
+                            <h3 class="info-element">العنوان&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+                            <h3 id="adresse-html" class="content-info-element">العنوان</h3>
+                        </div>
+                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
+                            <h3 class="info-element">سنة الانخراط&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
+                            <h3 id="aan-ins-html" class="content-info-element">2021</h3>
+                        </div>
+                    </div>
+                </div>
+                <div dir="rtl" class="rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+                    <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
+                    <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"  placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
+                    <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text"  placeholder="عنوان البطاقة" id="card-title">
+                    <input class="w-auto m-1 form-control" oninput="changeName()" type="text"  placeholder="الاسم الكامل لصاحب البطاقة" id="per-name">
+                    <input class="w-auto m-1 form-control" oninput="changeSifa()" type="text"  placeholder="الصفة" id="per-iden">
+                    <input class="w-auto m-1 form-control" oninput="changeCin()" type="text"  placeholder=" رقم البطاقة الوطنية" id="cin">
+                    <input class="w-auto m-1 form-control" oninput="changeAdress()" type="text"  placeholder="عنوان صاحب البطاقة" id="adresse">
+                    <input class="w-auto m-1 form-control" oninput="changeIns()" type="text"  placeholder="سنة الانخراط" id="aan-ins">
+                    <select onchange="changeBg()"  class="w-auto m-1 form-control"   id="select-bg">
+                        <option value="">اختر الخلفية (beta)</option>
+                        <option value="imges/card-bg.jpg">الخلفية الافتراضية</option>
+                        <option value="imges/card-bg2.jpeg">الخلفية 2</option>
+                        <option value="imges/card-bg3.jpg">الخلفية 3</option>
+                        <option value="imges/card-bg4.jpg">الخلفية 4</option>
+                    </select>    
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+                <button class="btn btn-info mt-2 m-auto">تحميل البطاقة</button>
+            </div> 
+        </div>
+    </div>
+    <footer class="fixed-bottom">
+        <h5 class="text-center"><a href="https://twitter.com/SomeAbdeu" target="blank">By:@someabdeu</a></h5>
+    </footer>
+    <script src="min.js"></script>
+</body>
+</html>

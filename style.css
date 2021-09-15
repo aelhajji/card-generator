@@ -1,0 +1,116 @@
+@font-face {
+    font-family: sondos;
+    src: url(fonts/sondosblack.ttf);
+  }
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url('https://cdn.pixabay.com/photo/2019/06/29/11/02/card-4306007_960_720.jpg') ;
+    background-size: cover;
+    /* background-color: brown; */
+    /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
+}
+.card-content{
+    /* margin: 10px;
+    padding: 3px; */
+    background:url('imges/card-bg.jpg') ;
+    background-size: cover;
+    max-width: 320px;
+    min-width: 320px;
+    max-height: 188px;
+    min-height: 188px;
+    position: relative;
+    /* margin: 0px; */
+}
+/* .card-content{
+    margin: 10px;
+    padding: 3px;
+    background:url('imges/card-bg.jpg') ;
+    background-size: cover;
+    min-width: 320px;
+    min-height: 180px;
+    position: relative;
+    margin: 0px;
+} */
+.gov-title-ar{
+    position: absolute;
+    color: #9aa163;
+    right: 15px;
+    top: 5px;
+    font-size: 12px;
+    font-family: sondos;
+}
+.info-element , input , button ,select{  
+    font-family: sondos;
+    color: #545454;
+
+}
+.cotrol-element{
+    background-color: #9aa163;
+    width: 89%;
+    min-height: 188px;
+    margin: 3px;
+    padding: 16px;
+}
+.content-info-element{
+   margin-right: 10px;
+}
+.gov-title-fr{
+    position: absolute;
+    color: #db7d54;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    right: 15px;
+    top: 19px;
+    font-size: 4px;
+}
+.mission{
+    position: absolute;
+    color: #545454;
+    right: 28px;
+    top: 38px;
+    font-size: 19px;
+}
+.person-info{
+    position: absolute;
+    color: black;
+    right: 15px;
+    top: 78px;
+}
+.person-info h3{
+    font-size: 8px;
+}
+footer h5 a{
+    text-decoration: none;
+    color: white;
+}
+
+/* media suery */
+@media only screen and (max-width: 1000px) {
+    /* .card-content{
+        margin: 10px;
+        background:url('imges/card-bg.jpg') ;
+        background-size: cover;
+        min-width: 320.126px;
+        min-height: 180.8976px;
+        position: relative;
+        margin: 0px;
+    } */
+    footer h5 a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+    .cotrol-element{
+        overflow: scroll;
+        overflow-x: hidden;
+        max-height: 282px;
+        background-color: #9aa163;
+        width: 89%;
+        margin: 3px;
+        padding: 16px;
+    }
+    .cotrol-element::-webkit-scrollbar {
+        display: none;
+    }
+  }
