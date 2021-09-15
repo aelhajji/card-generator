@@ -77,8 +77,8 @@ function SaveImg(){
 }
 function SavePdf(){
     alert(' هده الخدمة في طور الانجاز وستكون متاحة قريبا ')
-    const text = document.getElementsByClassName('card-content')[0];
-    html2pdf()
-    .from(text)
-    .save();
+    // const text = document.getElementsByClassName('card-content')[0];
+    // html2pdf()
+    // .from(text)
+    // .save();
 }
