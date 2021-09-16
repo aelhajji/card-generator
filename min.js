@@ -60,12 +60,26 @@ function changeAdress(){
 //by @aelhajji
 
 function changeBg(){
-    if(!bg.value){
-        document.getElementsByClassName("card-content")[0].style.backgroundImage = "url('imges/card-bg.jpg'')";
+    if(!this.bg.value){
+        document.getElementsByClassName("card-content")[0].style.backgroundImage = "url('imges/card-bg0.jpg')";
 
-    }else
+    }
+    if (this.bg.value == "imges/card-bg-acc.jpg") {
+        this.orgfrnamehtml.innerHTML ='Association Ajdour pour le Développement Humain';
+        this.orgfrname.value ='Association Ajdour pour le Développement Humain';
+        this.orgnamehtml.innerHTML ='جمعية أجدور للتنمية البشرية';
+        this.orgname.value ='جمعية أجدور للتنمية البشرية';
+        this.cardtitlehtml.innerHTML ='بطاقة المنخرط(ة)';
+        this.cardtitle.value ='بطاقة المنخرط(ة)';
+        this.whoishtml.innerHTML ='منخرط';
+        this.whois.value ='منخرط';
+        this.anninshtml.innerHTML ='2022';
+        this.annins.value ='2022';
+        document.getElementsByClassName("card-content")[0].style.backgroundImage = "url('"+bg.value+"')";
+    }
+    else {
     document.getElementsByClassName("card-content")[0].style.backgroundImage = "url('"+bg.value+"')";
-    
+    }
 }
 
 //save img 
@@ -91,15 +105,20 @@ function downloadURI(uri, name) {
 // save pdf 
 //by @elhajji
 function SavePdf(){    
-    const text = document.getElementsByClassName('card-content')[0];
-    html2pdf(text, {
-        hmargin:       -0.60, 
-        vmargin:       20, 
-        filename:     this.nameofpersone.value+' card.pdf',
-        image:        { type: 'jpeg', quality: 1 },
-        html2canvas:  { dpi: 192, letterRendering: true },
-        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait'}
-       });
-    html2pdf()
-    .from(text)
+
+
+    var r = confirm("مازال العمل مستمر من اجل تطوير هده الخدمة لكن يمكمن تجريبها عن طريق الظغط على ok");
+        if (r == true) {
+            const text = document.getElementsByClassName('card-content')[0];
+            html2pdf(text, {
+                hmargin:       -0.60, 
+                vmargin:       20, 
+                filename:     this.nameofpersone.value+' card.pdf',
+                image:        { type: 'jpeg', quality: 1 },
+                html2canvas:  { dpi: 192, letterRendering: true },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait'}
+               });
+            html2pdf()
+            .from(text)
+        } else {}
 }
