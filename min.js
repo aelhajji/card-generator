@@ -90,6 +90,7 @@ function downloadURI(uri, name) {
     link.href = uri;
     document.body.appendChild(link);
     link.click();
+    location.reload();
 }
 function SavePdf(){    
     const text = document.getElementsByClassName('card-content')[0];
