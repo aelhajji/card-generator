@@ -72,14 +72,11 @@ function changeBg(){
 // by @aelhajji
 
 function SaveImg(){
-
-    // alert('هده الخدمة في طور الانجاز وستكون متاحة قريبا')
     const input = document.getElementById('card-content');    
-html2canvas(input)
-      .then((canvas) => {
+    html2canvas(input)
+    .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
-        // document.body.appendChild(canvas)
-        downloadURI(imgData, "MaSimulation.png");
+        downloadURI(imgData, this.nameofpersone.value+" card.png");
   });
 }
 function downloadURI(uri, name) {
@@ -91,6 +88,8 @@ function downloadURI(uri, name) {
     link.click();
     location.reload();
 }
+// save pdf 
+//by @elhajji
 function SavePdf(){    
     const text = document.getElementsByClassName('card-content')[0];
     html2pdf(text, {
@@ -100,8 +99,7 @@ function SavePdf(){
         image:        { type: 'jpeg', quality: 1 },
         html2canvas:  { dpi: 192, letterRendering: true },
         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait'}
-       
-   });
+       });
     html2pdf()
     .from(text)
 }
