@@ -78,8 +78,7 @@ function SaveImg(){
 html2canvas(input)
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
-        console.log(canvas);
-        document.body.appendChild(canvas)
+        // document.body.appendChild(canvas)
         downloadURI(imgData, "MaSimulation.png");
   });
 }
