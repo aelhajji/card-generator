@@ -20,12 +20,8 @@ body{
 .cont{
     align-items: center;
     height: 95%;
-    /* background-color: brown; */
-    /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
 }
 .card-content{
-    /* margin: 10px;
-    padding: 3px; */
     background:url('imges/card-bg0.jpg') ;
     background-size: cover;
     max-width: 320px;
@@ -33,18 +29,11 @@ body{
     max-height: 188px;
     min-height: 188px;
     position: relative;
-    /* margin: 0px; */
 }
-/* .card-content{
-    margin: 10px;
-    padding: 3px;
-    background:url('imges/card-bg.jpg') ;
-    background-size: cover;
-    min-width: 320px;
-    min-height: 180px;
-    position: relative;
-    margin: 0px;
-} */
+.hiddden{
+    display: none !important;
+    overflow: hidden ;
+}
 .gov-title-ar{
     position: absolute;
     color: #9aa163;
@@ -53,7 +42,7 @@ body{
     font-size: 12px;
     font-family: sondos;
 }
-.info-element , input , button ,select{  
+.info-element , input , button ,select ,label{  
     font-family: sondos;
     color: #545454;
 
@@ -61,6 +50,7 @@ body{
 .cotrol-element{
     background-color: #9aa163;
     width: 89%;
+    min-height: 188px;
     min-height: 188px;
     margin: 3px;
     padding: 16px;

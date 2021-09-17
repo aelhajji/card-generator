@@ -51,39 +51,12 @@
                               </tr>
                             </tbody>
                           </table>
-                        <!-- <div dir="rtl" class="person-nam d-flex flex-nowrap">
-                            <h3 class="info-element">الاسم الكامل&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
-                            <h3 id="per-name-html" class="content-info-element">الاسم الكامل </h3>
-                        </div>
-                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
-                            <h3 class="info-element"> الصفة&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
-                            <h3 id="per-iden-html" class="content-info-element">الصفة</h3>
-                        </div>
-                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
-                            <h3 class="info-element">ر.ب.و&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
-                            <h3 id="cin-html" class="content-info-element">HA000000</h3>
-                        </div>
-                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
-                            <h3 class="info-element">العنوان&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
-                            <h3 id="adresse-html" class="content-info-element">العنوان</h3>
-                        </div>
-                        <div dir="rtl" class="person-nam d-flex flex-nowrap">
-                            <h3 class="info-element">سنة الانخراط&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h3>
-                            <h3 id="aan-ins-html" class="content-info-element">2021</h3>
-                        </div> -->
                     </div>
                 </div>
-                <div dir="rtl" class="rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
-                    <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
-                    <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"  placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
-                    <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text"  placeholder="عنوان البطاقة" id="card-title">
-                    <input class="w-auto m-1 form-control" oninput="changeName()" type="text"  placeholder="الاسم الكامل لصاحب البطاقة" id="per-name">
-                    <input class="w-auto m-1 form-control" oninput="changeSifa()" type="text"  placeholder="الصفة" id="per-iden">
-                    <input class="w-auto m-1 form-control" oninput="changeCin()" type="text"  placeholder=" رقم البطاقة الوطنية" id="cin">
-                    <input class="w-auto m-1 form-control" oninput="changeAdress()" type="text"  placeholder="عنوان صاحب البطاقة" id="adresse">
-                    <input class="w-auto m-1 form-control" oninput="changeIns()" type="text"  placeholder="سنة الانخراط" id="aan-ins">
-                    <select onchange="changeBg()"  class="w-auto m-1 form-control"   id="select-bg">
-                        <option value="">اختر الخلفية (beta)</option>
+                <div dir="rtl" id="stylecontrols" class="rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+                  <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1"> 
+                    <label  >تغيير الخلفية</label> 
+                  <select onchange="changeBg()"  class="mr-2  w-auto"   id="select-bg">
                         <option value="imges/card-bg0.jpg">الخلفية الافتراضية</option>
                         <option value="imges/card-bg-acc.jpg">خلفية ج.ج.ت.ب</option>
                         <option value="imges/card-bg2.jpeg">الخلفية 2</option>
@@ -92,10 +65,39 @@
                         <option value="imges/card-bg5.jpg">الخلفية 5</option>
                         <option value="imges/card-bg6.jpg">الخلفية 6</option>
                         <option value="imges/card-bg7.jpg">الخلفية 7</option>
-                    </select>    
+                    </select>
+                  </div>
+                    <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
+                      <label  > تغيير مكان محتوى البطاقة</label>
+                        <select onchange="changeTitlePosition()"  class="mr-2  w-auto"   id="select-bg">
+                          <option value="">اليمين</option>
+                          <option value="">اليسار</option>
+                          <option value="">الوسط</option>
+                        </select>
+                    </div>
+                    <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
+                        <label class="" >لون اسم المؤسسة(AR)</label>
+                        <input class="" type="color" name="" id="">
+                    </div> 
+                    <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+                      <label class="" >لون اسم المؤسسة(FR)</label>
+                      <input class="" type="color" name="" id="">
+                  </div>    
+                </div>
+                <div dir="rtl"  id="contentcontrols" class="hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+                    <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
+                    <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"  placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
+                    <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text"  placeholder="عنوان البطاقة" id="card-title">
+                    <input class="w-auto m-1 form-control" oninput="changeName()" type="text"  placeholder="الاسم الكامل لصاحب البطاقة" id="per-name">
+                    <input class="w-auto m-1 form-control" oninput="changeSifa()" type="text"  placeholder="الصفة" id="per-iden">
+                    <input class="w-auto m-1 form-control" oninput="changeCin()" type="text"  placeholder=" رقم البطاقة الوطنية" id="cin">
+                    <input class="w-auto m-1 form-control" oninput="changeAdress()" type="text"  placeholder="عنوان صاحب البطاقة" id="adresse">
+                    <input class="w-auto m-1 form-control" oninput="changeIns()" type="text"  placeholder="سنة الانخراط" id="aan-ins">
                 </div>
             </div>
             <div class="d-flex align-items-center justify-content-center flex-wrap">
+                <button onclick="changeContent()" class="btn btn-info btn-sm mt-2 m-1"> تغيير محتوى البطاقة</button>
+                <button onclick="changeStyle()" class="btn btn-info btn-sm mt-2 m-1">تغيير شكل البطاقة</button>
                 <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> تحميل البطاقة كصورة</button>
                 <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1">pdf تحميل البطاقة</button>
             </div> 

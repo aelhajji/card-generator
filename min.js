@@ -22,9 +22,21 @@ var cinhtml =document.getElementById('cin-html');
 var anninshtml = document.getElementById('aan-ins-html');
 var myadressehtml = document.getElementById('adresse-html');
 
+
+//changr  form inputs from  contrnt from to  styling form
+//by @elhajji
+function changeContent(){
+    document.getElementById("stylecontrols").className = "hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm ";
+    document.getElementById("contentcontrols").className = " rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm ";
+    
+}
+function changeStyle(){
+    document.getElementById("stylecontrols").className = " rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm ";
+    document.getElementById("contentcontrols").className = "hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm ";
+}
+
 //changr  inputs value
 //by @elhajji
-
 function changeOrgNameAr(){
     orgnamehtml.innerHTML = orgname.value;
 }
@@ -82,9 +94,9 @@ function changeBg(){
     }
 }
 
+
 //save img 
 // by @aelhajji
-
 function SaveImg(){
     const input = document.getElementById('card-content');    
     html2canvas(input)
@@ -102,11 +114,10 @@ function downloadURI(uri, name) {
     link.click();
     location.reload();
 }
+
 // save pdf 
 //by @elhajji
 function SavePdf(){    
-
-
     var r = confirm("مازال العمل مستمر من اجل تطوير هده الخدمة لكن يمكمن تجريبها عن طريق الظغط على ok");
         if (r == true) {
             const text = document.getElementsByClassName('card-content')[0];
