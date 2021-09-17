@@ -69,7 +69,7 @@
                     </select>
                   </div>
                     <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
-                      <label  > تغيير مكان محتوى البطاقة</label>
+                      <label > تغيير مكان محتوى البطاقة</label>
                         <select onchange="changeTitlePosition()"  class="mr-2  w-auto"   id="select-bg">
                           <option value="">اليمين</option>
                           <option value="">اليسار</option>
@@ -78,12 +78,16 @@
                     </div>
                     <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
                         <label class="" >لون اسم المؤسسة(AR)</label>
-                        <input class="" type="color" name="" id="">
+                        <input oninput="changeTitleArColor()" class="" type="color" id="title-color">
                     </div> 
                     <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
                       <label class="" >لون اسم المؤسسة(FR)</label>
-                      <input class="" type="color" name="" id="">
-                  </div>    
+                      <input oninput="changeTitleFrColor()" type="color" id="title-fr-color">
+                  </div>
+                  <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+                    <label class="" >لون عنوان البطاقة</label>
+                    <input oninput="changeJobTitleFrColor()" type="color" id="card-job-color">
+                </div>    
                 </div>
                 <div dir="rtl"  id="contentcontrols" class=" rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
                     <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
@@ -116,7 +120,7 @@
                       </div>
                       <div class="modal-body">
                         <p dir="rtl">-تأكد من المعلومات قبل التحميل</p>
-                        <p dir="rtl" >-ادا كان هناك أي خطأ اضغط على زر الالغاء وقم بتصحيحه</p>
+                        <p dir="rtl" >-ادا كان هناك أي خطأ قم بتصحيحه</p>
                         <img class="w-100" src="https://media.giphy.com/media/PvvSfSDFoAL5e/giphy.gif?cid=ecf05e47ui8upby6qetumpd7wzyibyxhmegzlqv0xou9a9bw&rid=giphy.gif&ct=g" />
                       </div>
                       <div class="modal-footer">

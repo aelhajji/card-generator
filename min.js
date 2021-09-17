@@ -68,7 +68,19 @@ function changeAdress(){
     myadressehtml.innerHTML = myadresse.value;
 }
 
-//change bg 
+// cange element color
+// by elhajji
+function changeTitleArColor(){
+    orgnamehtml.style.color= document.getElementById('title-color').value;
+}
+function changeTitleFrColor(){
+    orgfrnamehtml.style.color= document.getElementById('title-fr-color').value;
+}
+function changeJobTitleFrColor(){
+    cardtitlehtml.style.color = document.getElementById('card-job-color').value;
+}
+
+//change bg  card
 //by @aelhajji
 
 function changeBg(){
