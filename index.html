@@ -20,7 +20,7 @@
                     <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
                     <h3 id="org-name-fr-html" class="gov-title-fr pt-2">ORGANISATION NAME</h3>
                     <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
-                    <div class="person-info">
+                    <div id="person-info" class="person-info">
                         <table class=" table-borderless">
                             <thead>
                             </thead>
@@ -70,10 +70,10 @@
                   </div>
                     <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
                       <label > تغيير مكان محتوى البطاقة</label>
-                        <select onchange="changeTitlePosition()"  class="mr-2  w-auto"   id="select-bg">
-                          <option value="">اليمين</option>
-                          <option value="">اليسار</option>
-                          <option value="">الوسط</option>
+                        <select onchange="changeTitlePosition()"  class="mr-2  w-auto"   id="select-dir">
+                          <option value="right">اليمين</option>
+                          <option value="left">اليسار</option>
+                          <option value="center">الوسط</option>
                         </select>
                     </div>
                     <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">

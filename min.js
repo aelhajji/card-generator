@@ -110,6 +110,37 @@ function changeBg(){
     }
 }
 
+// change content emplacment
+// by @ellhajji
+function changeTitlePosition(){
+    // orgnamehtml.className = "gov-title-ar-center";
+    // orgfrnamehtml.className = "gov-title-fr-center";
+    // cardtitlehtml.className ="mission-center"
+    // document.getElementById('person-info').className='person-info-center'
+    const emplacmentt = document.getElementById('select-dir').value;
+    switch (emplacmentt) {
+        case 'right':
+            orgnamehtml.className = "gov-title-ar";
+            orgfrnamehtml.className = "gov-title-fr";
+            cardtitlehtml.className ="mission"
+            document.getElementById('person-info').className='person-info'
+          break;
+        case 'center':
+            orgnamehtml.className = "gov-title-ar-center";
+            orgfrnamehtml.className = "gov-title-fr-center";
+            cardtitlehtml.className ="mission-center"
+            document.getElementById('person-info').className='person-info-center'
+            break;
+        case 'left':
+            orgnamehtml.className = "gov-title-ar-left";
+            orgfrnamehtml.className = "gov-title-fr-left";
+            cardtitlehtml.className ="mission-left"
+            document.getElementById('person-info').className='person-info-left'
+          break;
+        default:
+          alert(`Sorry, we are out of here bb.`);
+      }
+}
 
 //save img 
 // by @aelhajji

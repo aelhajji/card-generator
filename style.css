@@ -53,8 +53,54 @@ title card css
     font-size: 12px;
     font-family: sondos;
 }
+.gov-title-fr{
+    position: absolute;
+    color: #db7d54;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    right: 15px;
+    top: 16px;
+    font-size: 4px;
+}
+/* centr title center*/
+.gov-title-ar-center {
+    position: absolute;
+    color: #9aa163;
+    right: 141px;
+    top: 5px;
+    font-size: 12px;
+    font-family: sondos;
+}
 
-
+.gov-title-fr-center{
+    position: absolute;
+    color: #db7d54;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    right: 141px;
+    top: 16px;
+    font-size: 4px;
+}
+/* left title */
+.gov-title-ar-left {
+    position: absolute;
+    color: #9aa163;
+    /* right: 240px; */
+    left: 11px;
+    top: 5px;
+    font-size: 12px;
+    font-family: sondos;
+}
+.gov-title-fr-left{
+    position: absolute;
+    color: #db7d54;
+    letter-spacing: 0.2px;
+    font-weight: bold;
+    /* right: 141px; */
+    top: 16px;
+    left: 11px;
+    font-size: 4px;
+}
 .info-element , input , button ,select ,label{  
     font-family: sondos;
     color: #545454;
@@ -71,15 +117,7 @@ title card css
 .content-info-element{
    margin-right: 10px;
 }
-.gov-title-fr{
-    position: absolute;
-    color: #db7d54;
-    letter-spacing: 0.2px;
-    font-weight: bold;
-    right: 15px;
-    top: 16px;
-    font-size: 4px;
-}
+/* job title */
 .mission{
     position: absolute;
     color: #545454;
@@ -87,10 +125,39 @@ title card css
     top: 38px;
     font-size: 19px;
 }
+.mission-center {
+    position: absolute;
+    color: #545454;
+    right: 106px;
+    top: 38px;
+    font-size: 19px;
+}
+.mission-left{
+    position: absolute;
+    color: #545454;
+    left: 15px;
+    top: 38px;
+    font-size: 19px;
+}
+/* person info */
 .person-info{
     position: absolute;
     color: black;
     right: 15px;
+    top: 78px;
+}
+.person-info-center {
+    position: absolute;
+    color: black;
+    right: 105px;
+    top: 78px;
+}
+.person-info-left {
+    position: absolute;
+    color: black;
+    direction: ltr;
+    left: 9px;
+    /* right: 105px; */
     top: 78px;
 }
 .person-info h3{
