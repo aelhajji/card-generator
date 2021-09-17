@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="imges/card.png" type="image/x-icon">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>CARD GENERATOR</title>
 </head>
 <body >
@@ -53,7 +54,7 @@
                           </table>
                     </div>
                 </div>
-                <div dir="rtl" id="stylecontrols" class="rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+                <div dir="rtl" id="stylecontrols" class="hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
                   <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1"> 
                     <label  >تغيير الخلفية</label> 
                   <select onchange="changeBg()"  class="mr-2  w-auto"   id="select-bg">
@@ -84,7 +85,7 @@
                       <input class="" type="color" name="" id="">
                   </div>    
                 </div>
-                <div dir="rtl"  id="contentcontrols" class="hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+                <div dir="rtl"  id="contentcontrols" class=" rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
                     <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
                     <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"  placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
                     <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text"  placeholder="عنوان البطاقة" id="card-title">
@@ -95,11 +96,74 @@
                     <input class="w-auto m-1 form-control" oninput="changeIns()" type="text"  placeholder="سنة الانخراط" id="aan-ins">
                 </div>
             </div>
-            <div class="d-flex align-items-center justify-content-center flex-wrap">
-                <button onclick="changeContent()" class="btn btn-info btn-sm mt-2 m-1"> تغيير محتوى البطاقة</button>
-                <button onclick="changeStyle()" class="btn btn-info btn-sm mt-2 m-1">تغيير شكل البطاقة</button>
-                <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> تحميل البطاقة كصورة</button>
-                <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1">pdf تحميل البطاقة</button>
+            <div class="d-grid gap-2 d-md-block btn-sm ">
+               <!-- <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i> تحميل  </button>
+                <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل </button> -->
+                <button onclick="changeContent()" class="btn btn-info   m-2"><i class="fas fa-keyboard "></i> محتوى البطاقة</button>
+                <button onclick="changeStyle()" class="btn btn-info   m-2"><i class="fas fa-fill-drip"></i>شكل البطاقة</button>
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <label for=""><i class="fas fa-save "></i>تحميل </label>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title"  id="exampleModalLabel">معلومات البطاقة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p dir="rtl">-تأكد من المعلومات قبل التحميل</p>
+                        <p dir="rtl" >-ادا كان هناك أي خطأ اضغط على زر الالغاء وقم بتصحيحه</p>
+                        <p dir="rtl" >- هده هي معلومات البطاقة : </p>
+                        <div id="card-content" dir="rtl" class="card-content col-sm">
+                          <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
+                          <h3 id="org-name-fr-html" class="gov-title-fr pt-2">ORGANISATION NAME</h3>
+                          <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
+                          <div class="person-info">
+                              <table class=" table-borderless">
+                                  <thead>
+                                  </thead>
+                                  <tbody style="font-size: 9px;">
+                                    <tr>
+                                      <th scope="row">الاسم الكامل</th>
+                                      <td class="pl-4">:</td>
+                                      <td style="padding-right: 8px;" id="per-name-html">الاسم الكامل</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">الصفة</th>
+                                      <td class="pl-4">:</td>
+                                      <td style="padding-right: 8px;" id="per-iden-html">الصفة</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">ر.ب.و</th>
+                                      <td class="pl-4">:</td>
+                                      <td style="padding-right: 8px;"  id="cin-html">HA000000</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">العنوان</th>
+                                      <td class="pl-4">:</td>
+                                      <td style="padding-right: 8px;" id="adresse-html" >المغرب</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">سنة الانخراط</th>
+                                      <td class="pl-4">:</td>
+                                      <td style="padding-right: 8px;" id="aan-ins-html" >سنة الانخراط</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i> تحميل  </button>
+                        <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div> 
         </div>
     </div>
@@ -107,11 +171,12 @@
     <footer class="">
         <h5 class="text-center"><a href="https://twitter.com/SomeAbdeu" target="blank">By:@someabdeu</a></h5>
     </footer>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="min.js"></script>
     <script src="cdn_pdf_githack.js"></script>
     <script src="html2canvas.min.js"></script>
-    <script src="  https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script src="  https://unpkg.com/html2canvas@1.0.0-rc.5/dist/html2canvas.js"></script> -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
