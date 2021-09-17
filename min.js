@@ -40,27 +40,21 @@ function changeStyle(){
 function changeOrgNameAr(){
     orgnamehtml.innerHTML = orgname.value;
 }
-
 function changeOrgNameFr(){
     orgfrnamehtml.innerHTML = orgfrname.value.toUpperCase();
 }
-
 function changeCardTitle(){
     cardtitlehtml.innerHTML = cardtitle.value;
 }
-
 function changeName(){
     nameofpersonehtml.innerHTML = nameofpersone.value;
 }
-
 function changeSifa(){
     whoishtml.innerHTML = whois.value;
 }
-
 function changeCin(){
     cinhtml.innerHTML = cin.value.toUpperCase();
 }
-
 function changeIns(){
     anninshtml.innerHTML = annins.value.toUpperCase();
 }
@@ -79,7 +73,17 @@ function changeTitleFrColor(){
 function changeJobTitleFrColor(){
     cardtitlehtml.style.color = document.getElementById('card-job-color').value;
 }
-
+function changeInfosColor(){
+    // document.getElementsByTagNameNS('td')[0].style.color = document.getElementById('card-info-color').value;
+    var colorchanger = document.getElementsByTagName("td");
+    for(var i = 0, j = colorchanger.length; i < j; ++i)
+    colorchanger[i].style.color = document.getElementById('card-info-color').value;
+    }
+function changeInfosTitleColor(){
+    var colorchanger = document.getElementsByTagName("th");
+    for(var i = 0, j = colorchanger.length; i < j; ++i)
+    colorchanger[i].style.color = document.getElementById('card-info-title-color').value;
+}
 //change bg  card
 //by @aelhajji
 
