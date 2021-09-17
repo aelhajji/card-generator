@@ -10,6 +10,10 @@
     font-family: Shopping;
     src: url(fonts/Shopping.ttf);
 }
+/* 
+body style
+by elhajji
+ */
 body{
     background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
     url('imges/sitebg.webp') ;
@@ -30,10 +34,17 @@ body{
     min-height: 188px;
     position: relative;
 }
+/* 
+claas show and hide controls
+ */
 .hiddden{
     display: none !important;
     overflow: hidden ;
 }
+
+/* 
+title card css
+ */
 .gov-title-ar{
     position: absolute;
     color: #9aa163;
@@ -42,6 +53,8 @@ body{
     font-size: 12px;
     font-family: sondos;
 }
+
+
 .info-element , input , button ,select ,label{  
     font-family: sondos;
     color: #545454;
@@ -115,7 +128,7 @@ footer{
     .cotrol-element{
         overflow: scroll;
         overflow-x: hidden;
-        max-height: 315px;
+        height: 314px;
         background-color: #9aa163;
         width: 89%;
         margin: 3px;
@@ -126,10 +139,7 @@ footer{
     }
     .cont{
         align-items:flex-start;
-        /* margin-top: 30px; */
         height: 100vh;
         
-        /* background-color: brown; */
-        /* background-image: url('https://cdn.pixabay.com/photo/2020/06/02/17/16/nature-5251850_960_720.jpg'); */
     }
   }
