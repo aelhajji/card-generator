@@ -1,157 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="imges/card.png" type="image/x-icon">
-    <!-- CSS only -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>CARD GENERATOR</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="imges/card.png" type="image/x-icon">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>CARD GENERATOR</title>
 </head>
-<body >
-<div class="d-flex cont justify-content-center">
-    <div  class="">
-        <div class="container">
-            <div class="row mt-4 d-flex justify-content-center align-items-center">
-                <div id="card-content" dir="rtl" class="card-content col-sm">
-                    <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
-                    <h3 id="org-name-fr-html" class="gov-title-fr pt-2">ORGANISATION NAME</h3>
-                    <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
-                    <div id="person-info" class="person-info">
-                        <table class=" table-borderless">
-                            <thead>
-                            </thead>
-                            <tbody style="font-size: 9px;">
-                              <tr>
-                                <th scope="row">الاسم الكامل</th>
-                                <td class="pl-4">:</td>
-                                <td style="padding-right: 8px;" id="per-name-html">الاسم الكامل</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">الصفة</th>
-                                <td class="pl-4">:</td>
-                                <td style="padding-right: 8px;" id="per-iden-html">الصفة</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">ر.ب.و</th>
-                                <td class="pl-4">:</td>
-                                <td style="padding-right: 8px;"  id="cin-html">HA000000</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">العنوان</th>
-                                <td class="pl-4">:</td>
-                                <td style="padding-right: 8px;" id="adresse-html" >المغرب</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">سنة الانخراط</th>
-                                <td class="pl-4">:</td>
-                                <td style="padding-right: 8px;" id="aan-ins-html" >سنة الانخراط</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-                </div>
-                <div dir="rtl" id="stylecontrols" class="hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
-                  <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1"> 
-                    <label  >تغيير الخلفية</label> 
-                  <select onchange="changeBg()"  class="mr-2  w-auto"   id="select-bg">
-                        <option value="imges/card-bg0.jpg">الخلفية الافتراضية</option>
-                        <option value="imges/card-bg-acc.jpg">خلفية ج.ج.ت.ب</option>
-                        <option value="imges/card-bg2.jpeg">الخلفية 2</option>
-                        <option value="imges/card-bg3.jpg">الخلفية 3</option>
-                        <option value="imges/card-bg4.jpg">الخلفية 4</option>
-                        <option value="imges/card-bg5.jpg">الخلفية 5</option>
-                        <option value="imges/card-bg6.jpg">الخلفية 6</option>
-                        <option value="imges/card-bg7.jpg">الخلفية 7</option>
-                    </select>
-                  </div>
-                    <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
-                      <label > تغيير مكان محتوى البطاقة</label>
-                        <select onchange="changeTitlePosition()"  class="mr-2  w-auto"   id="select-dir">
-                          <option value="right">اليمين</option>
-                          <option value="left">اليسار</option>
-                          <option value="center">الوسط</option>
-                        </select>
-                    </div>
-                    <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
-                        <label class="" >لون اسم المؤسسة(AR)</label>
-                        <input oninput="changeTitleArColor()" class="" type="color" id="title-color">
-                    </div> 
-                    <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
-                      <label class="" >لون اسم المؤسسة(FR)</label>
-                      <input oninput="changeTitleFrColor()" type="color" id="title-fr-color">
-                  </div>
-                  <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
-                    <label class="" >لون عنوان البطاقة</label>
-                    <input oninput="changeJobTitleFrColor()" type="color" id="card-job-color">
-                </div>
-                <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
-                  <label class="" >لون عناوين المعطيات الشخصية</label>
-                  <input oninput="changeInfosTitleColor()" type="color" id="card-info-title-color">
-              </div> 
-                <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
-                  <label class="" >لون المعطيات الشخصية</label>
-                  <input oninput="changeInfosColor()" type="color" id="card-info-color">
-              </div> 
+<style>
+  .img-per img {
+    margin-top: 12px;
+    margin-left: 14px;
+    position: absolute;
+    width: 61px;
+    left: 0;
+    height: 60px;
+    border-radius: 5px;
+  }
+</style>
 
-                </div>
-                <div dir="rtl"  id="contentcontrols" class=" rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
-                    <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"  placeholder=" اسم المؤسسة بالعربية" id="org-name">
-                    <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"  placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
-                    <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text"  placeholder="عنوان البطاقة" id="card-title">
-                    <input class="w-auto m-1 form-control" oninput="changeName()" type="text"  placeholder="الاسم الكامل لصاحب البطاقة" id="per-name">
-                    <input class="w-auto m-1 form-control" oninput="changeSifa()" type="text"  placeholder="الصفة" id="per-iden">
-                    <input class="w-auto m-1 form-control" oninput="changeCin()" type="text"  placeholder=" رقم البطاقة الوطنية" id="cin">
-                    <input class="w-auto m-1 form-control" oninput="changeAdress()" type="text"  placeholder="عنوان صاحب البطاقة" id="adresse">
-                    <input class="w-auto m-1 form-control" oninput="changeIns()" type="text"  placeholder="سنة الانخراط" id="aan-ins">
-                </div>
+<body>
+  <div class="d-flex cont justify-content-center">
+    <div class="">
+      <div class="container">
+        <div class="row mt-4 d-flex justify-content-center align-items-center">
+          <div id="card-content" dir="rtl" class="card-content col-sm">
+            <div class="img-per ">
+              <img class="hiddden" id="per-img-html"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEVBQELm5+g8Oz14d3g/PUBgX2Ht7u/r7O00MzVubW/k5eY5ODozMjTv8PHd3t8uLC+1trdZWVrJycuxsrOOjo/R0tN2dndLSkyamptlZWbAwcJSUlMrKizX2NmJiYqUlJWfoKEjISSpqap+fn9OTU8gHiGlpabWg+e9AAAF/0lEQVR4nO2cbXeiOhCAASNBEkSwIO9adfv/f+IFk4GEorfr2t0zPfN86OlJxyRPJq9+qLP62eSd4/1sROL8cNj6X/fguyFD/JAhfsgQP2SIHzLEDxnihwzxQ4b4IUP8kCF+yBA/ZIgfMsQPGeKHDPFDhvghQ/yQIX7IED9kiB8yxA8Z4ocM8UOG+CFD/JAhfsgQP2SIHzLEDxnihwzxQ4b4IUP8kCF+yBA/ZIgfMsQPGeKHDPFDhvghQ/yQIX7IED9kiB8yxA8Z4ocM8UOGWPDu/uWxofHPaqdPfCqBWNHjsa/0h6nYebDRHPtUyKzGZwSru4oPDQ+rDbCq4QNJPisZCoUU69VbcezytReLh5ZDbJJ3x+LtUh7iwOzZ1FyeQB21bi5f9yWsnkJstvI5w8KP/BvRsWZgmN3KohOUOJ6sT6nbl3He/3CzUy3vOjJ5OFbhGNvuSzk5di40dwJDdq1Uc/vB0LkedcSMKIyfMnTet66CFw2UBZ0/lIQBWMiyirhrwKOqDpYrFIc997kVm21iqKnZ6T/x89icWN2a47WnBih0F3nWMAZDNzrCNBBvyhAGWZ5tv1t/eLE4a+LO/RTrRhWs6QAM3egDeuxdlKFOqvg2w14xXjJkQeobZlP4bkGxHwxjEKZfW4fNDHvF5qEhn/ECwzGLtqEEQd4vqrTKXPD1958U5QkEb7FpCPOVt97csFeUDwx5tbOoXmEIWbQMg6PudFRtnDiWsXPJtGOUC7syr9Sx/rY7xFLGYlNByVnODd1o39w3jJK+AoP3/Z2F/1uGbnSKZ4bMgS7ljUoDEw1It7MkylQF+x+NPk+8eANVX9ncsFeM7xuuxx1Y7Xh3Bb9mmHFD0TQUR5Uwf2O0EBeqMCqtU5glytzYJ/sK1iqWn8Rk2Oq15u+au4Y15LDZXx9fMr5iyM8rmIt970xDWd26xHfWKogz3WtrYMVRjZN9NsuzKs3iyTBNXFCU7M5O02aaNjq8wHD/foEsnqVpGKgc+7mVLVEo78py0d3nH5a3p5MYGjlM30vdnF9J8X+nxWsMA5nD/rH7ZRh6ypDXViOeOqTdzM6WyrffWRsQc3RHh36CoRSjYipXf8fQCUDR33V8NBTaMLEN8weG/O0Lho4odTFP/5ZhrwiHl7JS67BV1her18HyLN2rUvuc9Eo9S4d5Phk6AtYitwcRDLeaNnyZoRNsrAuXtdOkjfUp5a32xxHRGStuit0v7DTDGIjEytbd87CpXrGXquPUVlSzVPfa74zNtPlYPi0O+mDYG8MhN7qCwtxpblkWtal4/zxU75hnX8CW4TRzRkMHrvp+oV+FLAj05ZNns4uUTni/koU6pZmIO5j6jnHip/q+dt0ad9e5oWAm4skX8MywP5+nYVWGooN7V/Z2HSZNUmxh1y1njbJ6XMmnZIg9dHDD8ws1SyxDxztMijNDf1MnFu0f3UtHw2HmQJtw896NV+3IbVt3fElFn99P4gI3bz7EhhF8lKeqfzPDfuq1UN18p/Ejmz+7eU+GxrDC+zDeTS8iA3WHnSEvi7F+KqzX02joeAwujN/7PjQMp2ENx5g3zuft+eFl8QUclDCHJzj/gEf+J8N+qerr+jcZsl/a0Nj9PKHOgnD8fiU4nF3zmwnubwshFit0vODY2rF8fx2F3uHWZnShSVVgfavRi5cFnzRkSaUmuZlEUYSqMC3hHGIB66pWfWkV8ey8EvffMo6Qm3PGVWy03XWH6Vsrb6dXV3WYhqRrVVk27JasrNxwCdd9cpb2e/+AnRChCq1zVkgp6s0qL6+BDO6fTarTfci1zC+b2us/ZVejmlsog0q9YJGmevIF/Fsw+5vcl8V+iWdfwD8BMsQPGeKHDPFDhvghQ/yQIX7IED9kiB8yxA8Z4ocM8UOG+CFD/JAhfsgQP2SIHzLEDxnihwzxQ4b4IUP8kCF+yBA/ZIgfMsQPGeKHDPFDhvghQ/yQIX7IED9kiB8yxA8Z4ocM8UOG+CFD/JAhfsgQP2SIHzLEDxnihwzxQ4b4IUP8kCF+yBA/ZIgfMsQPW/8Hc6VjJIivw0IAAAAASUVORK5CYII="
+                alt="">
             </div>
-            <div class="d-grid gap-2 d-md-block btn-sm ">
-               <!-- <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i> تحميل  </button>
-                <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل </button> -->
-                <button onclick="changeContent()" class="btn btn-info   m-2"><i class="fas fa-keyboard "></i> محتوى البطاقة</button>
-                <button onclick="changeStyle()" class="btn btn-info   m-2"><i class="fas fa-fill-drip"></i>شكل البطاقة</button>
-              <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <label for=""><i class="fas fa-save "></i>تحميل </label>
-                </button>
+            <h3 id="org-name-html" class="gov-title-ar">اسم المؤسسة</h3>
+            <h3 id="org-name-fr-html" class="gov-title-fr pt-2">ORGANISATION NAME</h3>
+            <h3 id="card-title-html" class="mission">عنوان البطاقة </h3>
+            <div id="person-info" class="person-info">
+              <table class=" table-borderless">
+                <thead>
+                </thead>
+                <tbody style="font-size: 9px;">
+                  <tr>
+                    <th scope="row">الاسم الكامل</th>
+                    <td class="pl-4">:</td>
+                    <td style="padding-right: 8px;" id="per-name-html">الاسم الكامل</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">الصفة</th>
+                    <td class="pl-4">:</td>
+                    <td style="padding-right: 8px;" id="per-iden-html">الصفة</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ر.ب.و</th>
+                    <td class="pl-4">:</td>
+                    <td style="padding-right: 8px;" id="cin-html">HA000000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">العنوان</th>
+                    <td class="pl-4">:</td>
+                    <td style="padding-right: 8px;" id="adresse-html">المغرب</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">سنة الانخراط</th>
+                    <td class="pl-4">:</td>
+                    <td style="padding-right: 8px;" id="aan-ins-html">سنة الانخراط</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div dir="rtl" id="stylecontrols"
+            class="hiddden rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+            <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
+              <label>تغيير الخلفية</label>
+              <select onchange="changeBg()" class="mr-2  w-auto" id="select-bg">
+                <option value="imges/card-bg0.jpg">الخلفية الافتراضية</option>
+                <option value="imges/card-bg-acc.jpg">خلفية ج.ج.ت.ب</option>
+                <option value="imges/card-bg2.jpeg">الخلفية 2</option>
+                <option value="imges/card-bg3.jpg">الخلفية 3</option>
+                <option value="imges/card-bg4.jpg">الخلفية 4</option>
+                <option value="imges/card-bg5.jpg">الخلفية 5</option>
+                <option value="imges/card-bg6.jpg">الخلفية 6</option>
+                <option value="imges/card-bg7.jpg">الخلفية 7</option>
+              </select>
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
+              <label> تغيير مكان محتوى البطاقة</label>
+              <select onchange="changeTitlePosition()" class="mr-2  w-auto" id="select-dir">
+                <option value="right">اليمين</option>
+                <option value="left">اليسار</option>
+                <option value="center">الوسط</option>
+              </select>
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center flex-wrap justify-content-center   m-1">
+              <label class="">لون اسم المؤسسة(AR)</label>
+              <input oninput="changeTitleArColor()" class="" type="color" id="title-color">
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+              <label class="">لون اسم المؤسسة(FR)</label>
+              <input oninput="changeTitleFrColor()" type="color" id="title-fr-color">
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+              <label class="">لون عنوان البطاقة</label>
+              <input oninput="changeJobTitleFrColor()" type="color" id="card-job-color">
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+              <label class="">لون عناوين المعطيات الشخصية</label>
+              <input oninput="changeInfosTitleColor()" type="color" id="card-info-title-color">
+            </div>
+            <div class="rounded bg-white p-1 d-flex align-items-center justify-content-center flex-wrap   m-1">
+              <label class="">لون المعطيات الشخصية</label>
+              <input oninput="changeInfosColor()" type="color" id="card-info-color">
+            </div>
 
-                <!-- Modal -->
-                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title"  id="exampleModalLabel">تحميل البطاقة</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <p dir="rtl">-تأكد من المعلومات قبل التحميل</p>
-                        <p dir="rtl" >-ادا كان هناك أي خطأ قم بتصحيحه</p>
-                        <img class="w-100" src="https://media.giphy.com/media/PvvSfSDFoAL5e/giphy.gif?cid=ecf05e47ui8upby6qetumpd7wzyibyxhmegzlqv0xou9a9bw&rid=giphy.gif&ct=g" />
-                      </div>
-                      <div class="modal-footer">
-                        <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i>البطاقة  تحميل كصورة </button>
-                        <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل البطاقة كملف pdf</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div> 
+          </div>
+          <div dir="rtl" id="contentcontrols"
+            class=" rounded cotrol-element d-flex align-items-center justify-content-center flex-wrap col-sm  ">
+            <input class="w-auto m-1 form-control" oninput="changeOrgNameAr()" type="text"
+              placeholder=" اسم المؤسسة بالعربية" id="org-name">
+            <input accept="image/png, image/gif, image/jpeg" class="w-auto m-1 form-control" onchange="changeImg()"
+              type="file" id="per-img">
+            <input class="w-auto m-1 form-control" oninput="changeOrgNameFr()" type="text"
+              placeholder="اسم المؤسسة بلغة تانية" id="org-name-fr">
+            <input class="w-auto m-1 form-control" oninput="changeCardTitle()" type="text" placeholder="عنوان البطاقة"
+              id="card-title">
+            <input class="w-auto m-1 form-control" oninput="changeName()" type="text"
+              placeholder="الاسم الكامل لصاحب البطاقة" id="per-name">
+            <input class="w-auto m-1 form-control" oninput="changeSifa()" type="text" placeholder="الصفة" id="per-iden">
+            <input class="w-auto m-1 form-control" oninput="changeCin()" type="text" placeholder=" رقم البطاقة الوطنية"
+              id="cin">
+            <input class="w-auto m-1 form-control" oninput="changeAdress()" type="text" placeholder="عنوان صاحب البطاقة"
+              id="adresse">
+            <input class="w-auto m-1 form-control" oninput="changeIns()" type="text" placeholder="سنة الانخراط"
+              id="aan-ins">
+          </div>
         </div>
+        <div class="d-grid gap-2 d-md-block btn-sm ">
+          <!-- <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i> تحميل  </button>
+                <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل </button> -->
+          <button onclick="changeContent()" class="btn btn-info   m-2"><i class="fas fa-keyboard "></i> محتوى
+            البطاقة</button>
+          <button onclick="changeStyle()" class="btn btn-info   m-2"><i class="fas fa-fill-drip"></i>شكل
+            البطاقة</button>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <label for=""><i class="fas fa-save "></i>تحميل </label>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">تحميل البطاقة</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p dir="rtl">-تأكد من المعلومات قبل التحميل</p>
+                  <p dir="rtl">-ادا كان هناك أي خطأ قم بتصحيحه</p>
+                  <img class="w-100"
+                    src="https://media.giphy.com/media/PvvSfSDFoAL5e/giphy.gif?cid=ecf05e47ui8upby6qetumpd7wzyibyxhmegzlqv0xou9a9bw&rid=giphy.gif&ct=g" />
+                </div>
+                <div class="modal-footer">
+                  <button onclick="SaveImg()" class="btn btn-info btn-sm mt-2 m-1"> <i class="fas fa-save"></i>البطاقة
+                    تحميل كصورة </button>
+                  <button onclick="SavePdf()" class="btn btn-info btn-sm mt-2 m-1"><i class="fas fa-file-pdf"></i> تحميل
+                    البطاقة كملف pdf</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-    <footer class="">
-        <h5 class="text-center"><a href="https://twitter.com/SomeAbdeu" target="blank">By:@someabdeu</a></h5>
-    </footer>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="min.js"></script>
-    <script src="cdn_pdf_githack.js"></script>
-    <script src="html2canvas.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </div>
+  <footer class="">
+    <h5 class="text-center"><a href="https://twitter.com/SomeAbdeu" target="blank">By:@someabdeu</a></h5>
+  </footer>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="min.js"></script>
+  <script src="cdn_pdf_githack.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
